@@ -24,7 +24,7 @@ function parseJwt(token: string) {
 }
 
 export default function Home() {
-    const [user, setUser] = useState<UserResponse | null>(null); // Estado inicial como null
+    const [user, setUser] = useState<UserResponse | null>(null)
     let token = localStorage.token
     let decodedToken = parseJwt(token)
     let id = decodedToken.id
@@ -54,7 +54,7 @@ export default function Home() {
         <>
 
             Olá {user?.user.name}
-            {entries.map((entry : any) => {
+            {entries.map((entry: any) => {
                 return (
                     <div key={entry._id}>
                         Sabado : {entry.content}
